@@ -10,14 +10,13 @@ Each folder is a self-contained, beginner-friendly environment designed to help 
 | Category        | Tools Covered                                   |
 |-----------------|-------------------------------------------------|
 | Virtualization  | Vagrant, VirtualBox                             |
-| CI/CD           | Jenkins, SonarQube, Nexus, GitHub Actions       |
+| CI/CD           | Jenkins, GitHub Actions                         |
 | Containers      | Docker, containerd                              |
 | Orchestration   | Kubernetes (K8s)                                |
 | IaC             | Terraform, Ansible                              |
 | Programming     | Python, GO                                      |
 | Scripts         | Bash, Python                                    |
 
----
 
 ### 🗂️ Folder Structure
 
