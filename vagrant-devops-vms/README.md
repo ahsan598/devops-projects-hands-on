@@ -1,13 +1,15 @@
 # 💻 DevOps Project: Vagrant VM Provisioning
 
-This project contains **Vagrant configuration files** to spin up **custom Virtual Machines (VMs)** with user-defined:
+This repository provides a collection of **Vagrant configurations** to quickly create local virtual machines tailored for common **DevOps tools and workflows**. Each setup is modular, easy to use, and designed for learning or testing purposes.
+
+With these Vagrant files, you can spin up **custom virtual machines** by specifying:
 
 - ✅ IP addresses  
-- ✅ RAM  
-- ✅ CPU cores  
-- ✅ Port forwarding  
+- ✅ RAM and CPU resources
+- ✅ Port forwarding
+- ✅ Tool-specific provisioning
 
-Useful for **DevOps practice**, local test environments, and reproducible infrastructure setups.
+Ideal for **DevOps labs, local development, and infrastructure-as-code practice.**
 
 
 
@@ -43,27 +45,11 @@ Useful for **DevOps practice**, local test environments, and reproducible infras
 ### 📂 Project Structure
 
 ```sh
-vagrant-vms/
-│
-├── README.md
-├── .gitignore
-│
-├── base-vm/
-│   └── Vagrantfile         # A basic single VM with configurable IP, RAM, CPU, ports
-│   └── config.yaml         # (Optional) For external config if you support it
-│
-├── cicd-pipeline-setup/
-│   └── Vagrantfile         # Multi-VM setup: Jenkins, SonarQube, Nexus
-│   └── setup-scripts/
-│       ├── jenkins.sh
-│       ├── sonar.sh
-│       └── nexus.sh
-│
-├── k8s-cluster/
-│   └── Vagrantfile         # (Optional future setup for Kubernetes local cluster)
-│
-└── ansible-ready-vm/
-    └── Vagrantfile         # VM prepped with Ansible for provisioning
+vagrant-devops-vms/
+├── base-vm/                # Basic customizable Ubuntu VM
+├── cicd-pipeline-setup/    # Multi-VM setup for CI/CD tools
+├── k8s-cluster/            # (WIP) Local Kubernetes cluster
+└── ansible-ready-vm/       # Ubuntu VM prepped for Ansible
 ```
 
 
@@ -108,6 +94,10 @@ vagrant ssh web         # SSH into VMs
 vagrant destroy -f      # Destroy VMs when done
 ```
 
+> 💡 Add execution permission for scripts:
+> ```sh
+> chmod +x setup-scripts/*.sh
+> ```
 
 ### 💡 Use Cases
 - DevOps tool installations (e.g., Jenkins, Docker, Ansible)

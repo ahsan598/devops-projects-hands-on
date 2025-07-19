@@ -1,0 +1,25 @@
+vms:
+  jenkins:
+    hostname: jenkins
+    ip: 192.168.56.11
+    memory: 4096
+    cpus: 2
+    ports:
+      - { guest: 80, host: 8080 }
+      - { guest: 8071, host: 8071 }
+
+  sonar:
+    hostname: sonar
+    ip: 192.168.56.12
+    memory: 4096
+    cpus: 2
+    ports:
+      - { guest: 9000, host: 9000 }
+
+  nexus:
+    hostname: nexus
+    ip: 192.168.56.13
+    memory: 4096
+    cpus: 2
+    ports:
+      - { guest: 8081, host: 8081 }

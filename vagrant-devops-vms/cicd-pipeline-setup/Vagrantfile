@@ -1,0 +1,29 @@
+require 'yaml'
+
+config_data = YAML.load_file('config.yaml')
+
+Vagrant.configure("2") do |config|
+  config_data['vms'].each do |name, settings|
+    config.vm.define name do |vm|
+      vm.vm.box = "ubuntu/jammy64"
+      vm.vm.hostname = settings['hostname']
+      vm.vm.network "private_network", ip: settings['ip']
+
+      # Port forwarding
+      settings['ports']&.each do |port|
+        vm.vm.network "forwarded_port", guest: port['guest'], host: port['host']
+      end
+
+      # VM provider settings
+      vm.vm.provider "virtualbox" do |vb|
+        vb.name = name
+        vb.memory = settings['memory']
+        vb.cpus = settings['cpus']
+        vb.gui = false
+      end
+
+      # Provisioning
+      vm.vm.provision "shell", path: "setup-scripts/#{name}.sh"
+    end
+  end
+end
