@@ -1,0 +1,63 @@
+# === General ===
+*.log
+*.swp
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+
+# Git internal/temporary files (safe to ignore if present)
+.gitconfig
+.git-credentials
+.git/index.lock
+.git-rewrite/
+.git/logs/
+.git/hooks/
+
+# === Node.js ===
+node_modules/
+npm-debug.log
+yarn.lock
+
+# === Vagrant ===
+.vagrant/
+*.box
+
+# === Terraform ===
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+crash.log
+
+# === Docker ===
+**/.dockerignore
+**/Dockerfile
+docker-compose.override.yml
+
+# === Kubernetes (optional, if using manifests or Helm) ===
+*.kubeconfig
+.kube/
+*.yaml~     # Editor backups
+
+# === AWS / Cloud CLI ===
+.aws/
+*.pem
+*.key
+*.pub
+
+# === Python (if any tools/scripts) ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# === Mac/Linux editor junk ===
+*~
+*.bak
+
+# === Archives ===
+*.zip
+*.tar.gz
+*.tgz
+*.rar

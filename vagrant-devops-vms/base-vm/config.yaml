@@ -1,0 +1,14 @@
+vm_name: ubuntu22
+hostname: ubuntu22
+box: ubuntu/jammy64
+
+# Network
+private_ip: 192.168.56.10
+public_network: true
+guest_port: 80
+host_port: 8080
+
+# Resources
+memory: 2048
+cpus: 2
+gui: true

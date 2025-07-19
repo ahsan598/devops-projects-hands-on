@@ -1,0 +1,38 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+
+require 'yaml'
+
+config_data = YAML.load_file('config.yaml')
+
+Vagrant.configure("2") do |config|
+  config.vm.define config_data['vm_name'] do |vm|
+    vm.vm.box = config_data['box']
+    vm.ssh.insert_key = false
+    vm.vm.hostname = config_data['hostname']
+
+    # Network Configurations
+    vm.vm.network "forwarded_port", guest: config_data['guest_port'], host: config_data['host_port']
+    vm.vm.network "private_network", ip: config_data['private_ip']
+    vm.vm.network "public_network" if config_data['public_network']
+
+    # Provider Settings
+    vm.vm.provider :virtualbox do |vb|
+      vb.name = config_data['vm_name']
+      vb.gui = config_data['gui']
+      vb.memory = config_data['memory']
+      vb.cpus = config_data['cpus']
+    end
+
+    # Shell Provisioner
+    vm.vm.provision "shell", inline: <<-SHELL
+      apt update -y
+      apt-get install -y tree unzip zip apache2
+    SHELL
+  end
+end
