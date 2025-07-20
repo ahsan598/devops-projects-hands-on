@@ -1,6 +1,6 @@
-# 💻 DevOps Project: Vagrant VM Provisioning
+# 💻 Vagrant-Based DevOps Lab Environment
 
-This repository provides a collection of **Vagrant configurations** to quickly create local virtual machines tailored for common **DevOps tools and workflows**. Each setup is modular, easy to use, and designed for learning or testing purposes.
+This repository provides a collection of **Vagrant configurations** to quickly create local virtual machines tailored for common **DevOps tools and workflows**. Each setup is modular, beginner-friendly, and designed for learning, testing, or experimentation.
 
 With these Vagrant files, you can spin up **custom virtual machines** by specifying:
 
@@ -15,11 +15,12 @@ Ideal for **DevOps labs, local development, and infrastructure-as-code practice.
 
 ### 🧰 Tools Used
 
-| Tool       | Purpose                                  |
-|------------|------------------------------------------|
-| Vagrant    | Automates VM provisioning and management |
-| VirtualBox | VM provider used with Vagrant            |
-| GitBash    | Bash terminal for provisioning scripts   |
+| Tool                    | Purpose                                                 |
+| ----------------------- | ------------------------------------------------------- |
+| Vagrant                 | Automates VM provisioning and management                |
+| VirtualBox              | VM provider used with Vagrant                           |
+| Shell (Bash) / Git Bash | Terminal used for running scripts (Linux/macOS/Windows) |
+
 
 
 
@@ -30,16 +31,6 @@ Ideal for **DevOps labs, local development, and infrastructure-as-code practice.
 - Port forwarding support for SSH, HTTP, or app-specific ports
 - Easy to bring up and destroy local environments
 - Great for simulating multi-node DevOps labs
-
----
-
-## 🚀 Getting Started
-
-### 🔧 Prerequisites
-
-- [Vagrant](https://www.vagrantup.com/downloads)
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [GIT](https://git-scm.com/downloads)
 
 
 ### 📂 Project Structure
@@ -64,40 +55,44 @@ git clone https://github.com/yourusername/vagrant-devops-vms.git
 cd vagrant-devops-vms
 ```
 
-2. **Customize the Vagrantfile**
+**2. Customize Your VM Configuration**
 
-Edit VM settings like below:
+All VM resources like memory, CPU, IP, and port forwarding are defined in the `config.yaml` file.
 
-```ruby
-config.vm.define "web" do |web|
-  web.vm.box = "ubuntu/bionic64"
-  web.vm.network "private_network", ip: "192.168.56.10"
-  web.vm.provider "virtualbox" do |vb|
-    vb.memory = "1024"
-    vb.cpus = 2
-  end
-  web.vm.network "forwarded_port", guest: 80, host: 8080
-end
+Example:
+
+```yaml
+vms:
+  web:
+    ip: "192.168.56.10"
+    memory: 1024
+    cpus: 2
+    ports:
+      - guest: 80
+        host: 8080
 ```
 
-To Edit use:
+Make edits using any editor, or open in VS Code.
+
 ```sh
-vim Vagrantfile
-nano Vagrantfile
+vim config.yaml
+nano config.yaml
 ```
+
 
 3. **Provision the VMs**
 
 ```sh
-vagrant up              # Start the VMs
-vagrant ssh web         # SSH into VMs
-vagrant destroy -f      # Destroy VMs when done
+vagrant up              # Start the VM(s)
+vagrant ssh web         # SSH into the 'web' VM
+vagrant destroy -f      # Destroy the VM(s) when done
 ```
 
 > 💡 Add execution permission for scripts:
 > ```sh
 > chmod +x setup-scripts/*.sh
 > ```
+
 
 ### 💡 Use Cases
 - DevOps tool installations (e.g., Jenkins, Docker, Ansible)
