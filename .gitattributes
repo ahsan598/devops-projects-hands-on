@@ -1,0 +1,45 @@
+# === Normalize line endings ===
+* text=auto
+
+# === Set default encoding for common files ===
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sh    text eol=lf
+*.env   text eol=lf
+*.conf  text eol=lf
+*.json  text eol=lf
+*.xml   text eol=lf
+*.tf    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+
+# === Scripts (bash, python, etc.) ===
+*.sh    text eol=lf
+*.py    text eol=lf
+
+# === Docker & Compose ===
+Dockerfile        text eol=lf
+.dockerignore     text eol=lf
+docker-compose.yml text eol=lf
+*.compose.yaml     text eol=lf
+
+# === Git treats these as binary (no diffing) ===
+*.zip    binary
+*.tar.gz binary
+*.tgz    binary
+*.jpg    binary
+*.jpeg   binary
+*.png    binary
+*.ico    binary
+*.pdf    binary
+*.jar    binary
+*.box    binary
+
+# === Ignore backup/swap files ===
+*~       text
+*.swp    text
+*.bak    text
+
+# === GitHub Linguist override (optional, for language stats) ===
+docs/** linguist-documentation
+*.md     linguist-documentation

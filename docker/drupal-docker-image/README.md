@@ -25,10 +25,10 @@ It serves as a practical example of using Docker for CMS development, focusing o
 
 ### Theme Overview:
 **Before applying theme to drupal**
-![Project Diagram](https://github.com/ahsan598/devops-labs/blob/main/drupal-docker-image/screenshots/after-theme-applied.jpg)
+![before-theme-apply](https://github.com/ahsan598/devops-labs/blob/main/docker/drupal-docker-image/screenshots/before-theme-applied.jpg)
 
 **After applying theme to drupal**
-![Project Diagram](https://github.com/ahsan598/devops-labs/blob/main/drupal-docker-image/screenshots/before-theme-applied.jpg) 
+![after-theme-apply](https://github.com/ahsan598/devops-labs/blob/main/docker/drupal-docker-image/screenshots/after-theme-applied.jpg) 
 
 
 ### 🛠️ How to Run the Project

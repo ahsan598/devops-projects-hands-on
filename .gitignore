@@ -33,8 +33,7 @@ crash.log
 
 # === Docker ===
 **/.dockerignore
-**/Dockerfile
-docker-compose.override.yml
+docker-compose.override.yml     # Optional overrides, often local only
 
 # === Kubernetes (optional, if using manifests or Helm) ===
 *.kubeconfig
