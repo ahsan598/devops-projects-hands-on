@@ -1,25 +1,24 @@
 # 🧪 DevOps Labs
 
-This is a personal DevOps lab collection I’m building to **enhance my skills through hands-on practice**.  
-It contains modular setups for tools and workflows like **CI/CD, Kubernetes, Ansible, Terraform**, and more — most of which run locally using **Vagrant**, **Docker**, or **minikube**.
+This is a personal DevOps lab collection to **build and reinforce my skills via hands-on practice**.  
+It’s a modular playground for tools and workflows like **CI/CD, Kubernetes, Ansible, Terraform**, and more — running mostly local using **Vagrant**, **Docker**, or **Minikube**.
 
-Whether it’s setting up Jenkins pipelines, launching a k8s cluster, or testing IaC with Terraform — this repo serves as my **learning playground** to explore DevOps concepts practically.
 
+Most labs are designed to run **locally**, without needing cloud accounts — unless explicitly stated (like `aws-labs/`).
 
 ---
 
 ### 📦 Tools & Technologies Included
 
-| Category       | Tools Covered                   |
-| -------------- | ------------------------------- |
-| Virtualization | **Vagrant**, **VirtualBox**     |
-| CI/CD          | **Jenkins**                     |
-| Containers     | **Docker**, **containerd**      |
-| Orchestration  | **Kubernetes (K8s)**            |
-| IaC            | **Terraform**, **Ansible**      |
-| Programming    | **Python**, **Go**              |
-| Scripts        | **Bash**, **Python**            |
-
+| Category       | Tools Covered                      |
+| -------------- | ---------------------------------- |
+| Virtualization | Vagrant, VirtualBox                |
+| CI/CD          | Jenkins, GitHub Actions            |
+| Containers     | Docker, containerd                 |
+| Orchestration  | Kubernetes (Minikube, K3s)         |
+| IaC            | Terraform, Ansible                 |
+| Scripting      | Bash, Python                       |
+| Programming    | Go, Python (as needed)             |
 
 
 ### 🗂️ Folder Structure
@@ -40,11 +39,13 @@ devops-labs/
 ### 🚀 How to Use
 
 - Clone this repo:
-```sh
-git clone https://github.com/<your-username>/devops-labs.git
-cd devops-labs
-```
-- Navigate to any lab folder and follow its README instructions.
+    ```sh
+    git clone https://github.com/<your-username>/devops-labs.git
+    cd devops-labs
+    ```
+
+- Each folder contains isolated examples, configs, and notes. No external dependencies between labs — explore them in any order you prefer.
+
 
 
 ### 🎯 Who Is This For?
@@ -54,12 +55,6 @@ cd devops-labs
 - Anyone building a local DevOps playground for experimentation
 
 
-
-### 📌 Coming Soon
-- GitOps workflows
-- Monitoring with Prometheus + Grafana
-- More CI/CD pipelines with GitHub Actions & GitLab CI
-
-
 ---
-> ⚠️ **Note:** This project is for my personal learning. Setups are simplified and may not follow production best practices.
+
+> **⚠️ [See Disclaimer](DISCLAIMER.md)** - This is a personal learning lab, not production-ready.

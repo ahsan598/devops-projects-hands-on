@@ -1,3 +1,9 @@
+# Note: This script is part of a personal DevOps lab setup.
+# It is intended for local learning and testing only.
+# Use at your own discretion.
+
+
+
 #!/bin/bash
 echo "Installing SonarQube..."
 sudo apt update -y

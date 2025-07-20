@@ -9,8 +9,16 @@ With these Vagrant files, you can spin up **custom virtual machines** by specify
 - ✅ Port forwarding
 - ✅ Tool-specific provisioning
 
-Ideal for **DevOps labs, local development, and infrastructure-as-code practice.**
+Each VM is customizable and defined via a `config.yaml` file.
 
+
+---
+
+### 🧰 Stack
+
+- Vagrant + VirtualBox
+- Bash provisioning scripts
+- Optional: VS Code / Git Bash / Linux terminal
 
 
 ### 🧰 Tools Used
@@ -19,8 +27,7 @@ Ideal for **DevOps labs, local development, and infrastructure-as-code practice.
 | ----------------------- | ------------------------------------------------------- |
 | Vagrant                 | Automates VM provisioning and management                |
 | VirtualBox              | VM provider used with Vagrant                           |
-| Shell (Bash) / Git Bash | Terminal used for running scripts (Linux/macOS/Windows) |
-
+| Terminall               | Optional: VS Code / Git Bash / Linux terminal           |
 
 
 
@@ -102,6 +109,11 @@ vagrant destroy -f      # Destroy the VM(s) when done
 
 
 ### 📌 Notes
-- You can define multiple VMs in one Vagrantfile using `config.vm.define`.
-- Make sure your host-only adapter doesn't conflict with existing network interfaces.
-- Ideal for repeatable local environments.
+
+- Vagrantfile dynamically reads from config.yaml
+- Ideal for offline testing or quick rebuilds
+- Not meant for production use
+
+---
+
+> 📘 **Note:** This setup is part of my personal DevOps lab for experimentation and hands-on learning. Use with caution in real environments.
