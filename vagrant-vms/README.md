@@ -41,7 +41,7 @@ Make sure the following tools are installed:
 ### 📂 Project Structure
 
 ```sh
-vagrant-devops-vms/
+vagrant-vms/
 ├── base-vm/                # Basic customizable Ubuntu VM
 ├── cicd-pipeline-setup/    # Multi-VM setup for CI/CD tools
 ├── k8s-cluster/            # (WIP) Local Kubernetes cluster
@@ -55,8 +55,8 @@ vagrant-devops-vms/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/vagrant-devops-vms.git
-cd vagrant-devops-vms
+git clone https://github.com/yourusername/vagrant-vms.git
+cd vagrant-vms
 ```
 
 
