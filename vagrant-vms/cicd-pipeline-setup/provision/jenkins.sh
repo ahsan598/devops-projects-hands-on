@@ -4,42 +4,32 @@
 
 
 #!/bin/bash
-
-# Display installation start message
 echo "Installing Jenkins..."
 
-# Step 1: Update the package list to get latest available versions
+# Update the package list
 sudo apt update -y
 
-# Step 2: Install OpenJDK 21 (Java Development Kit)
-# Jenkins requires Java to run - OpenJDK 21 is supported by Jenkins 2.419+
+# Jenkins requires Java to run
 sudo apt install -y openjdk-21-jdk
 
-# Step 3: Download Jenkins GPG key for repository authentication
-# Modern approach using keyring (replaces deprecated apt-key method)
-# This key ensures we're downloading authentic Jenkins packages
+# Download Jenkins GPG key for repository authentication
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 
-# Step 4: Add Jenkins official repository to system sources
-# [signed-by=...] tells APT to use our downloaded key for verification
-# This gives us access to official Jenkins packages
+# Add Jenkins official repository to system sources
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 
-# Step 5: Update package list again to include Jenkins repository
+# Update package list again to include Jenkins repository
 sudo apt update -y
 
-# Step 6: Install Jenkins and fontconfig
+# Install Jenkins and fontconfig
 # fontconfig: Required for proper rendering of Jenkins UI elements
-# jenkins: The main Jenkins automation server package
 sudo apt install -y fontconfig jenkins
 
-# Step 7: Configure Jenkins to start automatically on system boot
+# Configure Jenkins to start automatically on system boot
 sudo systemctl enable jenkins
-
-# Step 8: Start Jenkins service immediately
 sudo systemctl start jenkins
 
 

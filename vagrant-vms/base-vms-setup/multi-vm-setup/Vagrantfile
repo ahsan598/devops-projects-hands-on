@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+require 'yaml'
+
+config_data = YAML.load_file('config.yaml')
+
+Vagrant.configure("2") do |config|
+  config_data['vms'].each do |vm|
+    config.vm.define vm['name'] do |node|
+      node.vm.box = vm['box']
+      node.vm.hostname = vm['hostname']
+      node.vm.network "private_network", ip: vm['ip']
+
+      # Provider Settings
+      node.vm.provider "virtualbox" do |vb|
+        vb.memory = vm['memory'] || 1024
+        vb.cpus   = vm['cpus'] || 1
+        vb.name   = vm['name']
+      end
+
+      if vm['provision'] && vm['provision']['path']
+        prov = vm['provision']
+        node.vm.provision prov['type'], path: prov['path']
+      end
+    end
+  end
+end

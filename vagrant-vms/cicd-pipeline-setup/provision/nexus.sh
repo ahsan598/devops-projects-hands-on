@@ -34,7 +34,6 @@ echo "Nexus installation completed. Configure systemd service as needed."
 
 
 
-
 ##################################################################################################
 ## Uncomment below line to Create systemd service
 ##################################################################################################
@@ -45,7 +44,7 @@ echo "Nexus installation completed. Configure systemd service as needed."
 
 # # Java + user
 # sudo apt update -y
-# sudo apt install -y openjdk-21-jdk wget
+# sudo apt install -y openjdk-8-jdk wget
 
 # sudo useradd -r -m -U -d /opt/nexus -s /bin/bash nexus
 

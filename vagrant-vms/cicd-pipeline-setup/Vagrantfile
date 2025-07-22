@@ -4,11 +4,13 @@
 require 'yaml'
 
 config_data = YAML.load_file('config.yaml')
+default_box = config_data['default_box'] || 'ubuntu/nobel64'
+
 
 Vagrant.configure("2") do |config|
   config_data['vms'].each do |name, settings|
     config.vm.define name do |vm|
-      vm.vm.box = "ubuntu/jammy64"
+      vm.vm.box = settings['box'] || default_box  # Use the default box if not specified      # Use box from VM config or fallback to default_box
       vm.vm.hostname = settings['hostname']
       vm.vm.network "private_network", ip: settings['ip']
 
@@ -17,16 +19,24 @@ Vagrant.configure("2") do |config|
         vm.vm.network "forwarded_port", guest: port['guest'], host: port['host']
       end
 
-      # VM provider settings
+      # VM Resources
       vm.vm.provider "virtualbox" do |vb|
         vb.name = name
-        vb.memory = settings['memory']
-        vb.cpus = settings['cpus']
+        vb.memory = settings['memory'] || 1024  # default 1GB
+        vb.cpus = settings['cpus'] || 1         # default 1 CPU
         vb.gui = false
       end
 
-      # Provisioning
-      vm.vm.provision "shell", path: "setup-scripts/#{name}.sh"
+      # Optional: Provisioning
+      # To skip provisioning, set `provision: false` in config
+      if settings['provision'] != false
+        provision_script = "provision/#{name}.sh"
+        if File.exist?(provision_script)
+          vm.vm.provision "shell", path: provision_script
+        else
+          puts "⚠️  Warning: Provision script not found for #{name}: #{provision_script}"
+        end
+      end
     end
   end
 end

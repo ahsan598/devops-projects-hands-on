@@ -1,5 +1,9 @@
+# Default box if not specified per-VM
+default_box: ubuntu/noble64     # Ubuntu Noble 24.04 LTS
+
 vms:
   jenkins:
+    box: ubuntu/jammy64       # Ubuntu Jammy 22.04 LTS
     hostname: jenkins
     ip: 192.168.56.11
     memory: 4096
@@ -7,19 +11,34 @@ vms:
     ports:
       - { guest: 80, host: 8080 }
       - { guest: 8071, host: 8071 }
+  
+    # synced_folder:
+    #   host: ./shared
+    #   guest: /vagrant_data
+    # provision: false  # Uncomment to skip provisioning
+
 
   sonar:
+    box: ubuntu/jammy64       # Ubuntu Jammy 22.04 LTS
     hostname: sonar
     ip: 192.168.56.12
     memory: 4096
     cpus: 2
     ports:
       - { guest: 9000, host: 9000 }
+    
+    # synced_folder:
+      #   host: ./shared
+      #   guest: /vagrant_data
+
 
   nexus:
+    box: ubuntu/jammy64       # Ubuntu Jammy 22.04 LTS
     hostname: nexus
     ip: 192.168.56.13
     memory: 4096
     cpus: 2
     ports:
       - { guest: 8081, host: 8081 }
+
+    # provision: false
