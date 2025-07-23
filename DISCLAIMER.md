@@ -1,7 +1,6 @@
 # 📄 Disclaimer
 
-This repository is a **personal DevOps learning lab**, created for experimentation and hands-on skill development.
+This repository is a **personal DevOps lab**, built purely for self-learning and experimentation.  
+It is **not intended for production use**, nor actively maintained for public consumption.
 
-- Configurations are intentionally simplified and may skip production-grade practices like security, high availability, or scaling.
-- Not intended for production use.
-- Use at your own risk — setups and opinions reflect personal study and experimentation.
+All configurations and setups are created and managed solely by me — for skill-building, not deployment.

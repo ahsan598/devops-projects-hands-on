@@ -1,60 +1,51 @@
-# 🧪 DevOps Labs
+# 🧪 DevOps Labs – My Practice Portfolio
 
-This is a personal DevOps lab collection to **build and reinforce my skills via hands-on practice**.  
-It’s a modular playground for tools and workflows like **CI/CD, Kubernetes, Ansible, Terraform**, and more — running mostly local using **Vagrant**, **Docker**, or **Minikube**.
-
-
-Most labs are designed to run **locally**, without needing cloud accounts — unless explicitly stated (like `aws-labs/`).
-
----
-
-### 📦 Tools & Technologies Included
-
-| Category       | Tools Covered                      |
-| -------------- | ---------------------------------- |
-| Virtualization | Vagrant, VirtualBox                |
-| CI/CD          | Jenkins, GitHub Actions            |
-| Containers     | Docker, containerd                 |
-| Orchestration  | Kubernetes (Minikube, K3s)         |
-| IaC            | Terraform, Ansible                 |
-| Scripting      | Bash, Python                       |
-| Programming    | Go, Python (as needed)             |
+![Status](https://img.shields.io/badge/status-self--learning-inactive)
+![Scope](https://img.shields.io/badge/scope-personal-lightgrey)
+![Environments](https://img.shields.io/badge/env-local--only-blue)
+![Type](https://img.shields.io/badge/type-learning--portfolio-lightgrey)
 
 
-### 🗂️ Folder Structure
+A hands-on DevOps lab space I'm building to **learn by doing** and document my journey through real-world tools and workflows.
 
-```bash
-devops-labs/
-├── vagrant-vms/             # Vagrant files for single & multi-VM setups
-├── aws-labs/                # AWS CLI & Terraform practice (coming soon)
-├── cicd-labs/               # Jenkins CI/CD Pipelines
-├── docker-labs/             # Dockerfiles, Compose setups, container practice
-├── k8s-labs/                # Kubernetes manifests, minikube setup, k3s
-├── terraform-labs/          # Terraform examples for local & cloud infra
-├── scripts/                 # Bash scripts for provisioning, setup etc.
-├── programming/             # Code samples in Python, Go, and more
-└── README.md                # You are here
-```
-
-### 🚀 How to Use
-
-- Clone this repo:
-    ```sh
-    git clone https://github.com/<your-username>/devops-labs.git
-    cd devops-labs
-    ```
-
-- Each folder contains isolated examples, configs, and notes. No external dependencies between labs — explore them in any order you prefer.
-
-
-
-### 🎯 Who Is This For?
-
-- Myself, to improve DevOps hands-on skills 😄
-- Learners who prefer project-based practice
-- Anyone building a local DevOps playground for experimentation
+This is not a tutorial repo — it's a **personal portfolio**, built incrementally as I experiment with and solidify concepts in **DevOps, SRE, and infrastructure automation**.
 
 
 ---
 
-> **⚠️ [See Disclaimer](DISCLAIMER.md)** - This is a personal learning lab, not production-ready.
+### 🧠 Core Concepts Practiced
+- Declarative infrastructure
+- CI/CD workflows
+- Container orchestration
+- Infra provisioning (local + cloud)
+- Automation via scripting
+
+
+
+### 🧰 Tools I'm Exploring Hands-on
+- Vagrant, Docker, Kubernetes (Minikube/K3s)
+- Jenkins, GitHub Actions
+- Ansible, Terraform
+- Bash, Python
+
+
+
+### 🗺️ Lab Design Philosophy
+- Modular & self-contained labs
+- Local-first development
+- Prefer simple over complex
+- Built to learn, not to ship
+
+---
+
+### 📚 Learning References
+- [Docker Docs](https://docs.docker.com/)
+- [Kubernetes by Example](https://kubernetesbyexample.com/)
+- [Terraform Docs](https://developer.hashicorp.com/terraform)
+- [CI/CD with Jenkins](https://www.jenkins.io/doc/)
+
+---
+
+**This is an evolving collection — new labs are added over time.**
+
+⚠️ [Disclaimer](DISCLAIMER.md) - This is a personal learning lab, not production-ready.
