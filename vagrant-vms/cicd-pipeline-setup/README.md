@@ -1,89 +1,114 @@
-# 🛠️ CI/CD Pipeline Setup (Jenkins + SonarQube + Nexus)
+# ⚙️ Jenkins CI/CD Pipeline Lab (Multi-VM Setup)
 
-This Vagrant setup launches a basic multi-VM lab environment to simulate a DevOps CI/CD pipeline using open-source tools.
+This lab provisions a local **multi-VM Jenkins environment** using Vagrant — including:
 
-### 🔍 What’s Inside?
+- `master`: Jenkins controller
+- `agent1`: Jenkins agent + SonarQube server
+- `agent2`: Jenkins agent + Nexus repository manager
 
-| VM Name   | Tool Installed |
-|-----------|----------------|
-| jenkins   | Jenkins        |
-| sonar     | SonarQube      |
-| nexus     | Nexus OSS      |
+Each VM is preconfigured through provisioning scripts.
 
-> Ubuntu 22.04 used for all VMs.
+---
 
+### 🧱 VM Overview
 
-### 🚀 Getting Started
-
-**1. Prerequisites**
-
-Make sure you have the following installed:
-
-- [Vagrant](https://www.vagrantup.com/downloads)
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [GIT](https://git-scm.com/downloads)
+| VM Name        | Role                | IP Address       | Services              |
+|----------------|---------------------|------------------|------------------------|
+| master         | Jenkins Master      | `192.168.56.11`  | Jenkins UI (port 8080) |
+| agent1         | Jenkins Agent #1    | `192.168.56.12`  | SonarQube (port 9000)  |
+| agent2         | Jenkins Agent #2    | `192.168.56.13`  | Nexus (port 8081)      |
 
 
 
-**2. Navigate to Directory**
+### 🚀 How to Use
+
+**1. Start the Environment**
 
 ```bash
 cd cicd-pipeline-setup
 vagrant up
 ```
 
-This will:
-- Download Ubuntu box (if not already downloaded)
-- Launch 3 VMs based on the configuration defined in the `config.yaml` file.
+
+**2. Access Jenkins UI**
+- Open: http://192.168.56.11:8080
+- Get admin password:
+
+```bash
+vagrant ssh jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
 
+**3. Setup SSH-Based Jenkins Agents (from Jenkins UI)**
 
-**3. Access Tools in Browser**
+Step-by-step:
+  1. Go to Manage Jenkins → Nodes → New Node
+  2. Name: `sonar-agent` or `nexus-agent`
+  3. Type: "**Permanent Agent**"
+  4. Remote root directory: `/home/jenkins`
+  5. Launch method: SSH
+  6. Host:
+    - `192.168.56.12` for Sonar
+    - `192.168.56.13` for Nexus
+  7. Credentials:
+    - Username: `jenkins`
+    - Password: `jenkins`
+      (or use SSH key copied via `ssh-copy-id`)
 
-| Tool      | URL                               |
-| --------- | ----------------------------------|
-| Jenkins   | http://192.168.56.10:8080         |
-| SonarQube | http://192.168.56.11:9000         |
-| Nexus     | http://192.168.56.12:8081         |
 
+### 🔐 (Optional) SSH Setup for Agent Access
 
-**4. Managing Your VMs**
+To allow Jenkins master to connect to agents via SSH:
 
 ```sh
-vagrant ssh jenkins     # SSH into Jenkins VM
-vagrant halt            # Shut down all VMs
-vagrant destroy         # Destroy all VMs
+# On Jenkins master
+ssh-keygen                         # if not already
+ssh-copy-id jenkins@192.168.56.12  # sonar-agent
+ssh-copy-id jenkins@192.168.56.13  # nexus-agent
 ```
 
-### ⚙️ Configuration
 
-Edit the `config.yaml` to update:
-- CPU & memory
-- IP address
-- port forwards
+### 🧰 Notes
+- You can customize ports and resources in config.yaml
+- Provision scripts located in provision/ folder
+- Agents run SonarQube/Nexus alongside Jenkins agent user
+- Use vagrant halt or vagrant destroy to stop or clean the lab
 
-```yml
-# Resources
-memory: 2048
-cpus: 2
-```
 
 ---
 
-### 📁 Quick VM Commands (Single & Multi-VM)
+## ✅ How to Make a Jenkins Agent on sonar (agent1):
 
-- Run these commands from the folder containing the Vagrantfile to manage, provision, or restart your VMs.
+- Add this at the end of your agent1.sh (Sonar VM provision script):
 
-| Command                      | Description                                   |
-| ---------------------------- | --------------------------------------------- |
-| `vagrant up`                 | Start all VMs                                 |
-| `vagrant up vm1 vm2`         | Start specific VMs                            |
-| `vagrant ssh`                | SSH into default VM (if only one)             |
-| `vagrant ssh vm_name`        | SSH into a specific VM                        |
-| `vagrant halt`               | Stop all VMs                                  |
-| `vagrant destroy`            | Destroy all VMs                               |
-| `vagrant destroy vm_name`    | Destroy a specific VM                         |
-| `vagrant reload --provision` | Restart and reprovision all VMs               |
-| `vagrant provision`          | Run provision scripts again (without restart) |
-| `vagrant status`             | Show the current status of the VMs            |
-| `vagrant box list`           | List all locally installed Vagrant boxes      |
+### 📦 agent1.sh (append below SonarQube setup)
+```bash
+# --------- Jenkins Agent Setup (via SSH) ---------
+
+echo "[INFO] Setting up Jenkins agent requirements..."
+
+# Create jenkins user
+sudo useradd -m -s /bin/bash jenkins
+echo "jenkins:jenkins" | sudo chpasswd
+
+# Add SSH key for Jenkins master (optional: to allow passwordless login)
+mkdir -p /home/jenkins/.ssh
+chmod 700 /home/jenkins/.ssh
+
+# You can later copy public key from Jenkins master:
+# ssh-copy-id jenkins@192.168.56.12
+
+echo "[INFO] Jenkins agent user created. Ready for SSH connection."
+```
+
+- Next, follow the above steps to generate the SSH key and configure Jenkins agents via the UI.
+
+
+### 🔧 Tips:
+
+- Make sure `openssh-server` is installed on agent VM
+```sh
+sudo apt install openssh-server
+```
+- Ensure port `22` is open or forwarded if needed (usually default works fine on private_network)

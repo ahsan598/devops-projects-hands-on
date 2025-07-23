@@ -1,13 +1,12 @@
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for backwards compatibility).
+# Please don't change it unless you know what you're doing.
+
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
-
 require 'yaml'
-
 config_data = YAML.load_file('config.yaml')
 
 Vagrant.configure("2") do |config|
@@ -17,7 +16,7 @@ Vagrant.configure("2") do |config|
     vm.vm.hostname = config_data['hostname']
 
     # Network Configurations
-    vm.vm.network "forwarded_port", guest: config_data['guest_port'], host: config_data['host_port']
+    vm.vm.network "forwarded_port", guest: config_data['forwarded_port']['guest'], host: config_data['forwarded_port']['host']
     vm.vm.network "private_network", ip: config_data['private_ip']
     vm.vm.network "public_network" if config_data['public_network']
 
@@ -31,8 +30,8 @@ Vagrant.configure("2") do |config|
 
     # Shell Provisioner
     vm.vm.provision "shell", inline: <<-SHELL
-      dnf update -y
-      dnf install -y tree unzip zip httpd wget curl vim
+      yum update -y
+      yum install -y tree unzip zip httpd wget curl vim
     SHELL
   end
 end

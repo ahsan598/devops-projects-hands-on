@@ -4,37 +4,40 @@
 require 'yaml'
 
 config_data = YAML.load_file('config.yaml')
-default_box = config_data['default_box'] || 'ubuntu/nobel64'
-
+default_box = config_data['default_box'] || 'ubuntu/jammy64'
 
 Vagrant.configure("2") do |config|
   config_data['vms'].each do |name, settings|
     config.vm.define name do |vm|
-      vm.vm.box = settings['box'] || default_box  # Use the default box if not specified      # Use box from VM config or fallback to default_box
-      vm.vm.hostname = settings['hostname']
+      vm.vm.box = settings['box'] || default_box
+      vm.vm.hostname = settings['hostname'] || name
       vm.vm.network "private_network", ip: settings['ip']
 
-      # Port forwarding
-      settings['ports']&.each do |port|
+      # Port forwarding (optional)
+      Array(settings['ports']).each do |port|
         vm.vm.network "forwarded_port", guest: port['guest'], host: port['host']
       end
 
-      # VM Resources
+      # Resources
       vm.vm.provider "virtualbox" do |vb|
         vb.name = name
-        vb.memory = settings['memory'] || 1024  # default 1GB
-        vb.cpus = settings['cpus'] || 1         # default 1 CPU
+        vb.memory = settings['memory'] || 1024
+        vb.cpus = settings['cpus'] || 1
         vb.gui = false
       end
 
-      # Optional: Provisioning
-      # To skip provisioning, set `provision: false` in config
+      # Synced folder (optional)
+      if settings['synced_folder']
+        vm.vm.synced_folder settings['synced_folder']['host'], settings['synced_folder']['guest']
+      end
+
+      # Provisioning (optional)
       if settings['provision'] != false
-        provision_script = "provision/#{name}.sh"
-        if File.exist?(provision_script)
-          vm.vm.provision "shell", path: provision_script
+        script = "provision/#{name}.sh"
+        if File.exist?(script)
+          vm.vm.provision "shell", path: script
         else
-          puts "⚠️  Warning: Provision script not found for #{name}: #{provision_script}"
+          puts "⚠️  Provision script missing for #{name}: #{script}"
         end
       end
     end

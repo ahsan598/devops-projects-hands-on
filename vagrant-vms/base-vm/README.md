@@ -1,6 +1,6 @@
-# 🧱 Vagrant VM Playground (Single + Multi-VM)
+# 🧱 Single VM Setup (Vagrant)
 
-This repo provides a ready-to-use **Vagrant environment** for spinning up virtual machines using **VirtualBox** or other providers. It's structured to support both **single VM** and **multi-VM** setups for DevOps testing, provisioning, and sandboxing.
+This setup provides a lightweight **Vagrant environment** to spin up a single virtual machine using **VirtualBox**. Ideal for DevOps testing, provisioning, and tool sandboxing.
 
 ---
 
@@ -11,83 +11,20 @@ This repo provides a ready-to-use **Vagrant environment** for spinning up virtua
 - Easily configurable resources (CPU, RAM, IP)
 - Shared folder support
 
-
-### 🚀 Getting Started
-
-**1. Requirements**
-
-- [Vagrant](https://www.vagrantup.com/downloads)
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-
-Terminal:
-- Git Bash, VS Code terminal, or Linux/macOS shell
-
-
-**2. How to Provision Your VM**
-
-    ```bash
-    cd single-vm-setup
-    vagrant up
-    ```
-
-This will:
-- Download Ubuntu box (if not already downloaded)
-- Launch a VM with the given configuration: Port forwarding, IPs, etc..
-
-
-**3. Accessing Your VM**
-
-- To log in to the VM:
-    ```sh
-    vagrant ssh
-    ```
-
-- To shut down the VM:
-    ```sh
-    vagrant halt
-    ```
-
-- To destroy the VM:
-    ```sh
-    vagrant destroy
-    ```
-
 ### ⚙️ Configuration
 
-Edit the `config.yaml` file to configure the VM. It is read by the `Vagrantfile` to set:
-- Memory and CPUs
-- Static IP address
-- Port forwarding rules
-    ```yml
-    # config.yaml
-    memory: 2048
-    cpus: 2
-    ip: "192.168.56.20"
-    ports:
-    - guest: 80
-        host: 8080
-    - guest: 22
-        host: 2222
-    ```
+All VM settings are defined in `config.yaml`:
+- CPU, memory
+- Static IP
+- Port forwarding
+- Optional GUI mode
 
-> **💡 Tip:** Leave ports empty if no forwarding is needed.
+> You can easily modify `config.yaml` before running `vagrant up`.
 
-
-### 🧪 Debug Tips:
-
-- Check logs during failures:
-    ```sh
-    vagrant up --debug | tee vagrant-debug.log
-    ```
-
-
-### 📌 Notes
-
-- `multi-vm/provisions/*.sh` contains the setup scripts for each VM role (e.g., web server, database).
-
-You can disable provisioning by removing the `provision:` key from the config file for that VM.
-
-Use static IPs in `192.168.56.x` or `192.168.33.x` to avoid network conflicts.
+### 💡 Notes
+- Default box is Ubuntu 24.04 LTS (changeable in config)
+- Use `chmod +x provision.sh` before running if needed
+- Provisioning script is optional and can be skipped via config
 
 
 ---

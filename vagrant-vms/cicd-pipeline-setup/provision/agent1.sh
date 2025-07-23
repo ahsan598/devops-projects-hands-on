@@ -4,14 +4,19 @@
 
 
 #!/bin/bash
-echo "Installing SonarQube..."
+set -e
+
+echo "[INFO] Installing Java for SonarQube..."
 
 # Update system and install dependencies
 sudo apt update -y
 sudo apt install -y unzip openjdk-21-jdk wget
 
-# Create sonar user
-sudo useradd -m -d /opt/sonarqube -r -s /bin/bash sonar
+# Create sonar user (if not exists)
+if ! id sonar >/dev/null 2>&1; then
+  echo "[INFO] Creating sonar user..."
+  sudo useradd -m -d /opt/sonarqube -r -s /bin/bash sonar
+fi
 
 # Download and extract SonarQube
 cd /opt && sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.4.1.88267.zip
@@ -30,36 +35,26 @@ sudo sysctl -p
 # Cleanup
 sudo rm /opt/sonarqube-*.zip
 
-echo "SonarQube installation completed. Configure database and create systemd service as needed."
 
+echo "[INFO] SonarQube installed successfully."
+echo "➡️  To run it: sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh start"
 
 
 
 
 ##################################################################################################
-## Uncomment below line to Create systemd service
+## Optional Systemd Service Setup
 ##################################################################################################
 
+# - If you want Nexus to run as a service:
 
-# #!/bin/bash
-# echo "[*] Installing SonarQube..."
+# ```sh
+# sudo vim /etc/systemd/system/nexus.service
+# ```
 
-# # Install dependencies
-# sudo apt update -y
-# sudo apt install -y unzip openjdk-21-jdk wget
+# - Paste:
 
-# # Create sonar user & directories
-# sudo useradd -m -d /opt/sonarqube -r -s /bin/bash sonar
-
-# # Download & extract SonarQube
-# cd /opt
-# sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.4.1.88267.zip
-# sudo unzip sonarqube-10.4.1.88267.zip
-# sudo mv sonarqube-10.4.1.88267 sonarqube
-# sudo chown -R sonar:sonar /opt/sonarqube
-
-# # Create systemd service
-# cat <<EOF | sudo tee /etc/systemd/system/sonarqube.service
+# ```ini
 # [Unit]
 # Description=SonarQube service
 # After=syslog.target network.target
@@ -75,9 +70,9 @@ echo "SonarQube installation completed. Configure database and create systemd se
 
 # [Install]
 # WantedBy=multi-user.target
-# EOF
+# ```
 
-# # Start SonarQube
+# - Start SonarQube
 # sudo systemctl daemon-reexec
 # sudo systemctl enable sonarqube
 # sudo systemctl start sonarqube

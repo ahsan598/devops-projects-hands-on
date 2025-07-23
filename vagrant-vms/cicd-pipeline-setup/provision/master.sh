@@ -4,13 +4,15 @@
 
 
 #!/bin/bash
-echo "Installing Jenkins..."
+set -e
+
+echo "[INFO] Installing Jenkins..."
 
 # Update the package list
 sudo apt update -y
 
 # Jenkins requires Java to run
-sudo apt install -y openjdk-21-jdk
+sudo apt install -y openjdk-21-jdk curl gnupg2
 
 # Download Jenkins GPG key for repository authentication
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
