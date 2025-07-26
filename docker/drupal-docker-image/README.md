@@ -1,14 +1,16 @@
-# 📘 README: Drupal + MariaDB with Custom Bootstrap Theme (Docker Compose Project)
+# 📘 Drupal + MariaDB with Custom Bootstrap Theme (Docker Compose Project)
 
+### 🎯 Objective
 
-### 🧠 Project Objective
-
-This project sets up a Drupal 10 website with a MariaDB backend using Docker Compose. It also demonstrates how to install and activate a custom Drupal theme (Bootstrap) via a custom Docker image built from a Dockerfile.
-
-It serves as a practical example of using Docker for CMS development, focusing on container orchestration, image customization, and persistent data handling without host-level modifications.
+Set up a Drupal 10 site with a MariaDB backend using Docker Compose. This project demonstrates:
+ - Container orchestration with Docker Compose
+ - Custom Drupal image with a Bootstrap-based theme
+ - Persistent volumes for data
+ - No host-level dependencies
 
 > ⚙️ Tools used: Docker, Docker Compose, Git, Drupal, MariaDB
 
+---
 
 ### 🚀 Steps I Followed
 1. 📦 Dockerfile - Custom Drupal Image with Bootstrap Theme
@@ -22,6 +24,7 @@ It serves as a practical example of using Docker for CMS development, focusing o
 > - `depends_on` helps with service startup order (though not health-check based).
 > - Built `drupal` image from local Dockerfile, tagged as custom-drupal.
 
+---
 
 ### Theme Overview:
 **Before applying theme to drupal**
@@ -30,6 +33,7 @@ It serves as a practical example of using Docker for CMS development, focusing o
 **After applying theme to drupal**
 ![after-theme-apply](https://github.com/ahsan598/devops-labs/blob/main/docker/drupal-docker-image/screenshots/after-theme-applied.jpg) 
 
+---
 
 ### 🛠️ How to Run the Project
 
@@ -52,6 +56,7 @@ docker compose down
 # This will stop and remove containers, but preserve volumes (data persists)
 ```
 
+---
 
 ### 📚 What I Learned
 
@@ -67,14 +72,6 @@ docker compose down
 - This lab is for my personal DevOps self-learning journey.
 - Keep files minimal and clean
 - Focus on reusability, clarity, and understanding over production-readiness.
-
-### 🔁 Future Improvements / To-Dos
-
-- Add `healthcheck` to services
-- Use `.env` file for sensitive config (like DB creds)
-- Mount theme as a volume for faster iteration (dev mode)
-- Explore drush (Drupal CLI) usage in container
-
 
 ---
 

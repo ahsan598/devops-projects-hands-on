@@ -31,7 +31,7 @@ All VM settings are defined in `config.yaml`:
 
 ### 📁 Quick Commands
 
-- Run these commands from the folder containing the Vagrantfile to manage, provision, or restart your VM.
+- Run these commands from the folder containing the Vagrantfile to manage your VM.
 
 | Command                      | Description                                   |
 | ---------------------------- | --------------------------------------------- |
@@ -39,8 +39,6 @@ All VM settings are defined in `config.yaml`:
 | `vagrant ssh`                | Login into your VM                            |
 | `vagrant halt`               | Stop your VM                                  |
 | `vagrant destroy`            | Destroy your VM                               |
-| `vagrant reload --provision` | Restart and reprovision the VM                |
-| `vagrant provision`          | Run provision scripts again (without restart) |
 | `vagrant status`             | Show the current status of the VM             |
 | `vagrant box list`           | List all locally installed Vagrant boxes      |
 

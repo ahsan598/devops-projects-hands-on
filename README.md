@@ -38,7 +38,7 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 
 ---
 
-### 📚 Learning Resources – Tutorials & Guides (Some may be slightly outdated but still valuable for concept-building)
+### 📚 Learning Resources – Tutorials & Guides (Slightly outdated but still valuable for concept-building)
 
 - [Learn Docker](https://docker-curriculum.com/)
 - [Kube by Example](https://kubebyexample.com/)
@@ -46,15 +46,14 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 - [CI/CD with Jenkins](https://devopscube.com/jenkins-2-tutorials-getting-started-guide/)
 
 
-
-### 📄 Official Documentation (Always updated + in-depth)
+### 📄 Official Documentation – Always Updated & In-Depth
 
 - [Docker Docs](https://docs.docker.com/)
 - [Kubernetes Docs](https://kubernetes.io/docs/)
 - [Helm Docs](https://helm.sh/docs/)
 - [Terraform Docs](https://developer.hashicorp.com/terraform/docs)
 - [Jenkins Docs](https://www.jenkins.io/doc/)
-
+- [Ansible Docs](https://docs.ansible.com/)
 
 
 ### 🧪 Practice & Exam Simulators – Hands-on & Certification-Focused
@@ -64,8 +63,10 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 - [KodeKloud – Hands-on DevOps Labs](https://kodekloud.com)
 - [Play with Docker](https://labs.play-with-docker.com/)
 
+
 ---
 
-**This is an evolving collection — new labs are added over time.**
+### 🧾 ⚠️ Notes & Disclaimer
 
-⚠️ [Disclaimer](DISCLAIMER.md) - This is a personal learning lab, not production-ready.
+- ⚠️ **[Disclaimer](DISCLAIMER.md)**: This is a personal learning lab — **not** intended for production use.  
+- 🔄 **Note**: This is an evolving collection — new labs and tools will be added over time as I learn.

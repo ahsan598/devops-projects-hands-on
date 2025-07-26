@@ -112,3 +112,25 @@ echo "[INFO] Jenkins agent user created. Ready for SSH connection."
 sudo apt install openssh-server
 ```
 - Ensure port `22` is open or forwarded if needed (usually default works fine on **private_network**)
+
+
+---
+
+### 📁 Quick VM Commands (Multi-VM)
+
+- Run these commands from the folder containing the Vagrantfile to manage, provision, or restart your VMs.
+
+| Command                      | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| `vagrant up`                 | Start all VMs                                 |
+| `vagrant up vm1 vm2`         | Start specific VMs                            |
+| `vagrant ssh`                | SSH into default VM (if only one)             |
+| `vagrant ssh vm_name`        | SSH into a specific VM                        |
+| `vagrant halt`               | Stop all VMs                                  |
+| `vagrant destroy`            | Destroy all VMs                               |
+| `vagrant destroy vm_name`    | Destroy a specific VM                         |
+| `vagrant reload --provision` | Restart and reprovision all VMs               |
+| `vagrant provision`          | Run provision scripts again (without restart) |
+| `vagrant global-status`      | Show the current status of the VMs            |
+| `vagrant box list`           | List all locally installed Vagrant boxes      |
+| `vagrant global-status --prune`  | To refresh stale info                     |
