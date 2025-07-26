@@ -84,7 +84,8 @@ echo "➡️  To run it: sudo -u nexus /opt/nexus/bin/nexus start"
 
 # - Start Nexus
 # sudo systemctl daemon-reexec
-# sudo systemctl enable sonarqube
-# sudo systemctl start sonarqube
+# sudo systemctl enable nexus
+# sudo systemctl start nexus
+# sudo systemctl status nexus
 
 # echo "[*] Nexus setup complete!"

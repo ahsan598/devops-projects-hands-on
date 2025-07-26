@@ -38,11 +38,31 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 
 ---
 
-### 📚 Learning References
+### 📚 Learning Resources – Tutorials & Guides (Some may be slightly outdated but still valuable for concept-building)
+
+- [Learn Docker](https://docker-curriculum.com/)
+- [Kube by Example](https://kubebyexample.com/)
+- [Terraform By Example](https://www.terraformbyexample.com/)
+- [CI/CD with Jenkins](https://devopscube.com/jenkins-2-tutorials-getting-started-guide/)
+
+
+
+### 📄 Official Documentation (Always updated + in-depth)
+
 - [Docker Docs](https://docs.docker.com/)
-- [Kubernetes by Example](https://kubernetesbyexample.com/)
-- [Terraform Docs](https://developer.hashicorp.com/terraform)
-- [CI/CD with Jenkins](https://www.jenkins.io/doc/)
+- [Kubernetes Docs](https://kubernetes.io/docs/)
+- [Helm Docs](https://helm.sh/docs/)
+- [Terraform Docs](https://developer.hashicorp.com/terraform/docs)
+- [Jenkins Docs](https://www.jenkins.io/doc/)
+
+
+
+### 🧪 Practice & Exam Simulators – Hands-on & Certification-Focused
+
+- [Killer.sh – Kubernetes Exam Simulators (CKA, CKAD, CKS)](https://killer.sh/)
+- [Roadmap.sh – DevOps & SRE Learning Roadmaps](https://roadmap.sh/)
+- [KodeKloud – Hands-on DevOps Labs](https://kodekloud.com)
+- [Play with Docker](https://labs.play-with-docker.com/)
 
 ---
 

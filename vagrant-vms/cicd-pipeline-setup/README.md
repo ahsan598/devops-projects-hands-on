@@ -70,8 +70,8 @@ ssh-copy-id jenkins@192.168.56.13  # nexus-agent
 
 
 ### 🧰 Notes
-- You can customize ports and resources in config.yaml
-- Provision scripts located in provision/ folder
+- You can customize ports and resources in `config.yaml`
+- Provision scripts located in `provision/` folder
 - Agents run SonarQube/Nexus alongside Jenkins agent user
 - Use vagrant halt or vagrant destroy to stop or clean the lab
 
@@ -111,4 +111,4 @@ echo "[INFO] Jenkins agent user created. Ready for SSH connection."
 ```sh
 sudo apt install openssh-server
 ```
-- Ensure port `22` is open or forwarded if needed (usually default works fine on private_network)
+- Ensure port `22` is open or forwarded if needed (usually default works fine on **private_network**)

@@ -46,10 +46,10 @@ echo "➡️  To run it: sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh 
 ## Optional Systemd Service Setup
 ##################################################################################################
 
-# - If you want Nexus to run as a service:
+# - If you want Sonar to run as a service:
 
 # ```sh
-# sudo vim /etc/systemd/system/nexus.service
+# sudo vim /etc/systemd/system/sonar.service
 # ```
 
 # - Paste:
@@ -76,5 +76,6 @@ echo "➡️  To run it: sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh 
 # sudo systemctl daemon-reexec
 # sudo systemctl enable sonarqube
 # sudo systemctl start sonarqube
+# sudo systemctl status sonarqube
 
 # echo "[*] SonarQube setup complete!"
