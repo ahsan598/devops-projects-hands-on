@@ -1,13 +1,17 @@
-# === General ===
+# ===== Logs and System Files =====
 *.log
+*.bak
+*.tmp
 *.swp
-.DS_Store
-.idea/
-.vscode/
-.env
-.env.*
+*.swo
+*.pid
+
 
 # Git internal/temporary files (safe to ignore if present)
+.git/
+*.patch
+*.diff
+*.orig
 .gitconfig
 .git-credentials
 .git/index.lock
@@ -15,48 +19,251 @@
 .git/logs/
 .git/hooks/
 
-# === Node.js ===
+
+# ===== Terraform =====
+*.tfstate
+*.tfstate.*
+.crash
+.terraform/
+terraform.tfvars
+terraform.tfvars.json
+override.tf
+override.tf.json
+*.backup
+
+
+# ===== Docker =====
+*.tar
+*.img
+docker-compose.override.yml
+
+
+# ==== Kubernetes  ====
+*.kubeconfig
+.kube/
+*.yaml~
+*.yml~
+
+# ===== Helm =====
+charts/
+*.tgz
+
+# ===== ArgoCD =====
+argocd-cm.yaml
+argocd-secret.yaml
+*.argocd.token
+*.argocd.kubeconfig
+
+
+# ===== Ansible =====
+*.retry
+*.vault
+*.log
+
+# ===== HashiCorp Vault =====
+.vault-token
+vault-agent.log
+vault-agent*
+
+
+# ===== Jenkins =====
+*.jenkins
+secrets/
+jobs/
+
+
+# === AWS, Cert & Keys ===
+.aws/
+*.pem
+*.key
+*.pub
+*.crt
+*.cer
+
+# ===== CLI & Shell Tools =====
+*.sh~
+*.bash_history
+*.zsh_history
+.history
+.npmrc
+wget-log
+curl.log
+
+
+# ==== Python (if any tools/scripts) ====
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.env
+*.env
+
+
+# ===== NodeJS =====
 node_modules/
 npm-debug.log
+yarn-debug.log
+yarn-error.log
 yarn.lock
+
+
+# ===== Ruby =====
+*.gem
+*.rbc
+.bundle/
+vendor/bundle
+.rspec
+.rvmrc
+.rbenv-version
+.ruby-version
+coverage/
+spec/reports/
+test/tmp/
+test/version_tmp/
+tmp/
+log/
+db/*.sqlite3
+db/*.sqlite3-journal
+.byebug_history
+
+
+# ===== Go =====
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.a
+*.o
+*.obj
+*.mod
+*.sum
+vendor/
+bin/
+pkg/
+*.coverprofile
+*.prof
+
+
+# ===== OS Specific =====
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ==== Mac/Linux editor junk ====
+*~
+*.bak
+
+
+# ===== IDEs and Editors =====
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# JetBrains
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse IDE
+.classpath
+.project
+.settings/
+bin/
+
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# NetBeans IDE
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
+# ===== Maven =====
+.mvn/
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+
+# ===== Gradle =====
+.gradle/
+build/
+
 
 # === Vagrant ===
 .vagrant/
 *.box
 
-# === Terraform ===
-*.tfstate
-*.tfstate.*
-.terraform/
-terraform.tfvars
-crash.log
 
-# === Docker ===
-**/.dockerignore
-docker-compose.override.yml     # Optional overrides, often local only
+# ===== General Executables/Binaries =====
+*.exe
+*.dll
+*.so
+*.out
+*.o
+*.class
+*.jar
+*.war
+*.apk
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
 
-# === Kubernetes (optional, if using manifests or Helm) ===
-*.kubeconfig
-.kube/
-*.yaml~     # Editor backups
 
-# === AWS / Cloud CLI ===
-.aws/
-*.pem
-*.key
-*.pub
-
-# === Python (if any tools/scripts) ===
-__pycache__/
-*.py[cod]
-*.egg-info/
-
-# === Mac/Linux editor junk ===
-*~
-*.bak
-
-# === Archives ===
+# ==== Archives ====
 *.zip
 *.tar.gz
 *.tgz
 *.rar
+*.7z
+
+
+# ===== Coverage / Testing =====
+coverage/
+*.lcov
+*.coverage
+.nyc_output/
+
+
+# ===== Misc =====
+.envrc
+tmp/
+.cache/
+dist/
+build/
+
+
+# ===== Custom Local Settings =====
+local.settings.json
+
+
+# ===== Environments =====
+.env
+!.env.example   # Keep example config
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
