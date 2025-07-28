@@ -21,13 +21,11 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 - Automation via scripting
 
 
-
 ### 🧰 Tools I'm Exploring Hands-on
 - Vagrant, Docker, Kubernetes (Minikube/K3s)
 - Jenkins, GitHub Actions
 - Ansible, Terraform
 - Bash, Python
-
 
 
 ### 🗺️ Lab Design Philosophy
