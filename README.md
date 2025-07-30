@@ -1,4 +1,4 @@
-# 🧪 DevOps Labs – My Practice Portfolio
+# 👨‍💻 Learn DevOps by Doing - My Practice Lab
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-Learning-orange?style=for-the-badge)
