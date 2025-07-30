@@ -1,9 +1,9 @@
 # 🧪 DevOps Labs – My Practice Portfolio
 
-![Status](https://img.shields.io/badge/status-active-brightgreen)
-![Scope](https://img.shields.io/badge/scope-learning-orange)
-![Environments](https://img.shields.io/badge/env-local--only-blue)
-![Type](https://img.shields.io/badge/type-portfolio-blueviolet)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+![Scope](https://img.shields.io/badge/Scope-Learning-orange?style=for-the-badge)
+![Environments](https://img.shields.io/badge/Environments-Local--only-blue?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Portfolio-blueviolet?style=for-the-badge)
 
 
 A hands-on DevOps lab space I'm building to **learn by doing** and document my journey through real-world tools and workflows.
