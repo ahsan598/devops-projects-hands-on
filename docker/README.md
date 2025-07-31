@@ -2,7 +2,7 @@
 
 Welcome to my **Docker Labs** – a hands-on collection of containerization projects.
  
-Each lab is a self-contained environment using Docker and Docker Compose, built to sharpen real-world DevOps skills.
+Each lab is a self-contained environment using docker and docker compose, built to sharpen real-world DevOps skills.
 
 ---
 
@@ -14,6 +14,7 @@ Each lab is a self-contained environment using Docker and Docker Compose, built 
 
 ### 🚀 Running Any Lab
 
+Ex:
 ```bash
 cd 01-nginx-static
 docker-compose up --build
@@ -30,7 +31,7 @@ docker-compose up --build
 
 ## 🧠 Key Skills Being Built
 
-- Writing optimized and layered `Dockerfile`s
+- Writing optimized and layered `dockerfiles`
 - Containerizing real applications (Node, PHP, Python, etc.)
 - Using `docker-compose` for multi-service setups
 - Managing volumes, environment configs, and networks
@@ -38,13 +39,12 @@ docker-compose up --build
 - Troubleshooting and debugging container behavior
 
 
-
 ### 🧪 Approach
 
-- Each folder is a **self-contained Docker lab**
+- Each folder is a **self-contained docker lab**
 - Real applications or backend services are used (no "hello world" only)
 - Minimal dependencies — focus on what's essential to learn
-- All labs runnable locally with just Docker/Docker Compose
+- All labs runnable locally with just docker/docker compose
 
 
 
@@ -59,7 +59,7 @@ docker-compose up --build
 
 ### 📒 Learnings (So Far)
 
-- Docker networking works differently across Compose vs single-container
+- Docker networking works differently across compose vs single-container
 - Multi-stage builds drastically reduce final image size
 - Mounting local volumes makes live dev smoother, but caching gets tricky
 - FastAPI + PostgreSQL + Docker Compose is a killer combo for prototyping APIs

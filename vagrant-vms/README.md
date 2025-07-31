@@ -2,7 +2,7 @@
 
 This directory contains modular **Vagrant environments** to spin up local VMs for DevOps tool exploration and hands-on practice.
 
-Each setup is built for experimentation, with configurable options for VM resources, networking, and provisioning.
+Each setup is built with configurable options for VM resources, networking, and provisioning.
 
 ---
 
@@ -18,7 +18,7 @@ Install the following tools before getting started:
 ### 🔧 Key Features
 
 - Single and multi-VM setups via `Vagrantfile`
-- Customizable CPU, memory, IP, and port forwarding
+- Customizable CPU, Memory, IP, and Port forwarding
 - Basic provisioning using Bash scripts
 - Ideal for simulating local DevOps clusters
 - Quick teardown and rebuilds

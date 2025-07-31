@@ -1,8 +1,6 @@
 # 🧱 Project Notes – Drupal + MariaDB with Docker Compose
 
-This document explains how I set up a **Drupal 10 website** using Docker Compose with a **MariaDB backend**, and how I added a custom **Bootstrap theme** using a Dockerfile.
-
-> ✅ Part of my personal DevOps Lab focused on Docker fundamentals, image building, and service orchestration.
+This document explains how I set up a **Drupal-10 website** using docker compose with a **MariaDB backend**, and how I added a custom **Bootstrap theme** using a Dockerfile.
 
 ---
 
@@ -27,14 +25,14 @@ This project sets up a **multi-container Drupal CMS** using **Docker Compose**. 
 
 ## 🧰 How the Dockerfile Works
 
-This Dockerfile creates a **custom Drupal 10 image** with a pre-installed Bootstrap theme.
+This Dockerfile creates a **custom Drupal-10 image** with a pre-installed Bootstrap theme.
 
 ### 🔨 Steps Explained:
 
 1. **Use Base Image**
-   - Start from the official Drupal 10 image:
+   - Use official Drupal 10.2.7 image (slim variant) as base for a lightweight setup
      ```dockerfile
-     FROM drupal:10
+     FROM drupal:10.2.7-slim
      ```
 
 2. **Install Git**
@@ -103,17 +101,9 @@ This `docker-compose.yml` file runs both services (Drupal + MariaDB) in an isola
 - `db-data` → Used to persist MariaDB database files
 
 
----
-
 
 ### 🌀 Docker Lifecycle Notes
 
 - docker compose down — Removes containers only
 - Volumes (drupal-data, db-data) persist between runs
 - Next docker compose up will restore site and DB as-is
-
-### 📚 References & Learning
-
-- Based on Docker Mastery by Bret Fisher (@bretfisher)
-- Used official images: `drupal:10, mariadb:10.9`
-- Consulted Docker Hub for volume and environment best practices

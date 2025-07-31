@@ -43,7 +43,6 @@ All VM settings are defined in `config.yaml`:
 | `vagrant box list`           | List all locally installed Vagrant boxes      |
 
 
----
 
 ### 📦 Popular Vagrant Boxes (Base Images)
 
@@ -53,13 +52,13 @@ All VM settings are defined in `config.yaml`:
 | Ubuntu 22.04    | `ubuntu/jammy64`      | VirtualBox |
 | Ubuntu 24.04    | `ubuntu/noble64`      | VirtualBox |
 | CentOS 7        | `centos/7`            | VirtualBox |
+| Vagrant Cloud   | `generic/centos7`     | VirtualBox |
 | CentOS Stream 8 | `centos/stream8`      | VirtualBox |
 | Rocky Linux 8   | `rockylinux/8`        | VirtualBox |
 | Debian 12       | `debian/bookworm64`   | VirtualBox |
 | AlmaLinux 9     | `almalinux/9`         | VirtualBox |
 | Red Hat (Trial) | `generic/rhel9`       | VirtualBox |
 | Arch Linux      | `archlinux/archlinux` | VirtualBox |
-
 
 
 > You can search more at: https://app.vagrantup.com/boxes/search

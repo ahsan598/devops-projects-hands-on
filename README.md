@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-Learning-orange?style=for-the-badge)
-![Environments](https://img.shields.io/badge/Environments-Local--only-blue?style=for-the-badge)
+![Environments](https://img.shields.io/badge/Environments-Local--+--cloud-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Portfolio-blueviolet?style=for-the-badge)
 
 
@@ -14,11 +14,11 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 ---
 
 ### 🧠 Core Concepts Practiced
-- Declarative infrastructure
+- Declarative Infrastructure
 - CI/CD workflows
-- Container orchestration
-- Infra provisioning (local + cloud)
-- Automation via scripting
+- Container Orchestration
+- Infrastructure Provisioning (local + cloud)
+- Automation via Scripting
 
 
 ### 🧰 Tools I'm Exploring Hands-on
@@ -67,4 +67,4 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 ### 🧾 ⚠️ Notes & Disclaimer
 
 - ⚠️ **[Disclaimer](DISCLAIMER.md)**: This is a personal learning lab — **not** intended for production use.  
-- 🔄 **Note**: This is an evolving collection — new labs and tools will be added over time as I learn.
+- ✍️ **Note**: This is an evolving collection — new labs and tools will be added over time as I learn.
