@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-Learning-orange?style=for-the-badge)
-![Environments](https://img.shields.io/badge/Environments-Local--+-cloud-blue?style=for-the-badge)
+![Environments](https://img.shields.io/badge/Environments-Local+%2F+Cloud-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Portfolio-blueviolet?style=for-the-badge)
 
 
