@@ -64,7 +64,7 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 
 ---
 
-### 🧾 ⚠️ Notes & Disclaimer
+### 🧾 Notes & Disclaimer
 
 - ⚠️ **[Disclaimer](DISCLAIMER.md)**: This is a personal learning lab — **not** intended for production use.  
 - ✍️ **Note**: This is an evolving collection — new labs and tools will be added over time as I learn.
