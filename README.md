@@ -22,7 +22,7 @@ This is not a tutorial repo — it's a **personal portfolio**, built incremental
 
 
 ### 🧰 Tools I'm Exploring Hands-on
-- Vagrant, Docker, Kubernetes (Minikube/K3s)
+- Helm, Docker, Kubernetes (Minikube/K3s)
 - Jenkins, GitHub Actions
 - Ansible, Terraform
 - Bash, Python

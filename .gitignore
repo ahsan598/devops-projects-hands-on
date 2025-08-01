@@ -211,11 +211,6 @@ dependency-reduced-pom.xml
 build/
 
 
-# === Vagrant ===
-.vagrant/
-*.box
-
-
 # ===== General Executables/Binaries =====
 *.exe
 *.dll
