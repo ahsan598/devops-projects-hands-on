@@ -22,10 +22,18 @@ The architecture spans across multiple availability zones and includes component
 - **Route 53** for domain registration and DNS routing
 - **CloudWatch** for monitoring logs, metrics, and alerts
 
+---
 
 ### 🧭 Architecture Diagram
 
 ![Architecture](https://github.com/ahsan598/aws-project-2/blob/main/aws-wordpress-website-diagram.svg)
+
+
+### 🔍 Infrastructure Breakdown
+
+![AWS WordPress Explanation](infrastructure-breakdown.jpg)
+
+> This version of the diagram includes detailed annotations for each AWS component involved.
 
 ---
 
