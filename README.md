@@ -30,12 +30,14 @@ This repository is a collection of practical DevOps setups built to simulate rea
 
 ```sh
 devops-projects-hands-on/
-├── project-1-ecommerce-deploy/
-├── project-2-monitoring-stack/
-├── project-3-ci-cd-for-python-app/
-├── drupal-docker-compose/            # CMS setup using Docker Compose
-├── github-actions-demo/              # Basic CI/CD pipeline
-├── aws-aurora-db-setup/              # Cloud DB setup notes + screenshots
+├── project-1-aws-aurora-db-setup/           # Deploy Amazon Aurora (MySQL) in VPC
+├── project-2-aws-wordpress-setup/           # WordPress on AWS with full infra
+├── project-3-drupal-docker-compose/         # CMS setup using Docker Compose
+├── project-4-github-actions-demo/           # Simple GitHub Actions CI/CD pipeline
+├── project-5-github-actions-demo/           # Simple Jenkins CI/CD pipeline
+├── project-6-ecommerce-deploy/
+├── project-7-monitoring-stack/
+├── project-8-ci-cd-for-python-app/
 └── README.md
 ```
 
