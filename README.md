@@ -1,70 +1,52 @@
-# 👨‍💻 Learn DevOps by Doing - My Practice Lab
+# 👨‍💻 Learn DevOps by Doing – My Practice Projects
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-Learning-orange?style=for-the-badge)
-![Environments](https://img.shields.io/badge/Environments-Local%2FCloud-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Portfolio-blueviolet?style=for-the-badge)
 
+Practicing real-world DevOps projects with hands-on implementations of **CI/CD**, **containerization**, **orchestration**, **monitoring**, and **infrastructure as code (IaC)**.
 
-A hands-on DevOps lab space I'm building to **learn by doing** and document my journey through real-world tools and workflows.
-
-This is not a tutorial repo — it's a **personal portfolio**, built incrementally as I experiment with and solidify concepts in **DevOps, SRE, and infrastructure automation**.
-
+This repository is a collection of practical DevOps setups built to simulate real-world workflows, automate infrastructure, and demonstrate end-to-end deployment pipelines.
 
 ---
 
 ### 🧠 Core Concepts Practiced
+
 - Declarative Infrastructure
-- CI/CD workflows
+- CI/CD Workflows
 - Container Orchestration
-- Infrastructure Provisioning (local + cloud)
+- Infrastructure Provisioning (Local + Cloud)
 - Automation via Scripting
 
 
-### 🧰 Tools I'm Exploring Hands-on
-- Helm, Docker, Kubernetes (Minikube/K3s)
-- Jenkins, GitHub Actions
-- Ansible, Terraform
-- Bash, Python
+### 🧰 Tools I'm Exploring Hands-On
+
+- **Containerization & Orchestration**: Docker, Kubernetes (Minikube / K3s), Helm
+- **CI/CD**: Jenkins, GitHub Actions
+- **IaC & Automation**: Terraform, Ansible
+- **Scripting**: Bash, Python
 
 
-### 🗺️ Lab Design Philosophy
-- Modular & self-contained labs
-- Local-first development
-- Prefer simple over complex
-- Built to learn, not to ship
+### 🗺️ Directory Overview
 
----
+```sh
+devops-projects-hands-on/
+├── project-1-ecommerce-deploy/
+├── project-2-monitoring-stack/
+├── project-3-ci-cd-for-python-app/
+├── drupal-docker-compose/            # CMS setup using Docker Compose
+├── github-actions-demo/              # Basic CI/CD pipeline
+├── aws-aurora-db-setup/              # Cloud DB setup notes + screenshots
+└── README.md
+```
 
-### 📚 Learning Resources – Tutorials & Guides (Slightly outdated but still valuable for concept-building)
+### 🎯 Goals of This Repository
 
-- [Learn Docker](https://docker-curriculum.com/)
-- [Kube by Example](https://kubebyexample.com/)
-- [Terraform By Example](https://www.terraformbyexample.com/)
-- [CI/CD with Jenkins](https://devopscube.com/jenkins-2-tutorials-getting-started-guide/)
-
-
-### 📄 Official Documentation – Always Updated & In-Depth
-
-- [Docker Docs](https://docs.docker.com/)
-- [Kubernetes Docs](https://kubernetes.io/docs/)
-- [Helm Docs](https://helm.sh/docs/)
-- [Terraform Docs](https://developer.hashicorp.com/terraform/docs)
-- [Jenkins Docs](https://www.jenkins.io/doc/)
-- [Ansible Docs](https://docs.ansible.com/)
+- Reinforce DevOps concepts through real-world problem-solving
+- Build and document reusable workflows and automation
+- Create a strong foundation for interviews and team-level project work
 
 
-### 🧪 Practice & Exam Simulators – Hands-on & Certification-Focused
+### 🚧 Work in Progress
 
-- [Killer.sh – Kubernetes Exam Simulators (CKA, CKAD, CKS)](https://killer.sh/)
-- [Roadmap.sh – DevOps & SRE Learning Roadmaps](https://roadmap.sh/)
-- [KodeKloud – Hands-on DevOps Labs](https://kodekloud.com)
-- [Play with Docker](https://labs.play-with-docker.com/)
-
-
----
-
-### 🧾 Notes & Disclaimer
-
-- ⚠️ **[Disclaimer](DISCLAIMER.md)**: This is a personal learning lab — **not** intended for production use.  
-- ✍️ **Note**: This is an evolving collection — new labs and tools will be added over time as I learn.
+This is an active learning repo — new projects and improvements are added regularly.
+Each folder contains its own README.md with setup steps and tool usage.
