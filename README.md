@@ -26,20 +26,15 @@ This repository is a collection of practical DevOps setups built to simulate rea
 - **Scripting**: Bash, Python
 
 
-### 🗺️ Directory Overview
+### 🧪 Included Projects
 
-```sh
-devops-projects-hands-on/
-├── project-1-aws-aurora-db-setup/           # Deploy Amazon Aurora (MySQL) in VPC
-├── project-2-aws-wordpress-setup/           # WordPress on AWS with full infra
-├── project-3-drupal-docker-compose/         # CMS setup using Docker Compose
-├── project-4-github-actions-demo/           # Simple GitHub Actions CI/CD pipeline
-├── project-5-github-actions-demo/           # Simple Jenkins CI/CD pipeline
-├── project-6-ecommerce-deploy/
-├── project-7-monitoring-stack/
-├── project-8-ci-cd-for-python-app/
-└── README.md
-```
+| Project                 | Stack          | Highlights                                                 |
+|-------------------------|----------------|------------------------------------------------------------|
+| **Drupal Docker Setup** | Docker Compose | CMS containerization with MySQL backend                    |
+| **GitHub Actions Demo** | GitHub Actions | CI/CD for a sample app                                     |
+| **Aurora DB Setup**     | AWS VPC, RDS   | Multi-AZ DB with Bastion access                            |
+| **WordPress on AWS**    | AWS Full Stack | High-availability web + DB infra with Route 53, ALB, EC2, RDS |
+
 
 ### 🎯 Goals of This Repository
 
