@@ -32,6 +32,7 @@ This repository is a collection of practical DevOps setups built to simulate rea
 |-------------------------|----------------|------------------------------------------------------------|
 | **Drupal Docker Setup** | Docker Compose | CMS containerization with MySQL backend                    |
 | **GitHub Actions Demo** | GitHub Actions | CI/CD for a sample app                                     |
+| **Jenkins Nodejs Pipeline**  | Jenkins Docker   | CI/CD with Jenkins + Docker on AWS EC2              |
 | **Aurora DB Setup**     | AWS VPC, RDS   | Multi-AZ DB with Bastion access                            |
 | **WordPress on AWS**    | AWS Full Stack | High-availability web + DB infra with Route 53, ALB, EC2, RDS |
 
