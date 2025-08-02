@@ -37,9 +37,9 @@ This project demonstrates a complete CI/CD workflow using **Jenkins**, **Docker*
 ```sh
 jenkins-nodejs-pipeline/
 ├── Dockerfile
+├── Jenkinsfile
 ├── app.js
 ├── package.json
-├── workflow.png
 └── README.md
 ```
 

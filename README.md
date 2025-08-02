@@ -1,7 +1,7 @@
 # 👨‍💻 Learn DevOps by Doing – My Practice Projects
 
-![Scope](https://img.shields.io/badge/Scope-Learning-orange?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Portfolio-blueviolet?style=for-the-badge)
+![Scope](https://img.shields.io/badge/Scope-Learning-Aqua?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Practice_Projects-blueviolet?style=for-the-badge)
 
 Practicing real-world DevOps projects with hands-on implementations of **CI/CD**, **containerization**, **orchestration**, **monitoring**, and **infrastructure as code (IaC)**.
 
