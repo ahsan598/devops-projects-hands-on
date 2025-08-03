@@ -3,7 +3,7 @@
 ![Scope](https://img.shields.io/badge/Scope-Learning-steelblue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Practice_Projects-blueviolet?style=for-the-badge)
 
-Practicing real-world DevOps projects with hands-on implementations of **CI/CD**, **containerization**, **orchestration**, **monitoring**, and **infrastructure as code (IaC)**.
+Practicing real-world DevOps projects with hands-on implementations of **CI/CD**, **Containerization**, **Orchestration**, **Monitoring**, and **Infrastructure As Code (IaC)**.
 
 This repository is a collection of practical DevOps setups built to simulate real-world workflows, automate infrastructure, and demonstrate end-to-end deployment pipelines.
 
@@ -21,9 +21,10 @@ This repository is a collection of practical DevOps setups built to simulate rea
 ### 🧰 Tools I'm Exploring Hands-On
 
 - **Containerization & Orchestration**: Docker, Kubernetes (Minikube / K3s), Helm
-- **CI/CD**: Jenkins, GitHub Actions
+- **CI/CD**: Jenkins, GitLabCI, ArgoCD
 - **IaC & Automation**: Terraform, Ansible
 - **Scripting**: Bash, Python
+- **Monitoring**: Grafana, Prometheus
 
 
 ### 🧪 Included Projects
@@ -31,10 +32,9 @@ This repository is a collection of practical DevOps setups built to simulate rea
 | Project                 | Stack          | Highlights                                                 |
 |-------------------------|----------------|------------------------------------------------------------|
 | **Drupal Docker Setup** | Docker Compose | CMS containerization with MySQL backend                    |
-| **GitHub Actions Demo** | GitHub Actions | CI/CD for a sample app                                     |
-| **Jenkins Nodejs Pipeline**  | Jenkins Docker   | CI/CD with Jenkins + Docker on AWS EC2              |
+| **Jenkins Nodejs App**  | Jenkins Docker | Deploying Nodejs App using Jenkins on Docker               |
 | **Aurora DB Setup**     | AWS VPC, RDS   | Multi-AZ DB with Bastion access                            |
-| **WordPress on AWS**    | AWS Full Stack | High-availability web + DB infra with Route 53, ALB, EC2, RDS |
+| **WordPress on AWS**    | AWS Full Stack | High-availability web + DB infra with Route 53             |
 
 
 ### 🎯 Goals of This Repository
