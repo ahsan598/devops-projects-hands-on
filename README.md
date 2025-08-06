@@ -34,7 +34,7 @@ This repository is a collection of practical DevOps setups built to simulate rea
 | **Drupal Docker Setup** | Docker Compose | CMS containerization with MySQL backend                    |
 | **Jenkins Nodejs App**  | Jenkins Docker | Deploying Nodejs App using Jenkins on Docker               |
 | **Aurora DB Setup**     | AWS VPC, RDS   | Multi-AZ DB with Bastion access                            |
-| **WordPress on AWS**    | AWS Full Stack | High-availability web + DB infra with Route 53             |
+| **WordPress on AWS**    | AWS Full Stack | High-availability Web + DB infra with Route 53             |
 | **AWS Lift & Shift**    | EC2, VPC, RDS  | Legacy web app migrated to AWS using EC2, ALB, RDS, & VPC  |
 | **Jenkins Static Site** | Jenkins, Docker, SonarQube | Static website deployed via Jenkins pipeline with code quality checks |
 
