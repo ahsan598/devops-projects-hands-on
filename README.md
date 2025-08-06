@@ -49,4 +49,4 @@ This repository is a collection of practical DevOps setups built to simulate rea
 
 ### 🚧 Work in Progress
 
-This is a hands-on learning repository — each project reflects a practical use case, with continuous improvements based on real-world experimentation. Every folder includes its own README.md with setup steps and tool usage for reproducibility.
+This is a hands-on learning repository — each project reflects a practical use case, with continuous improvements based on real-world experimentation. Every folder includes its own **README.md** with setup steps and tool usage for reproducibility.
