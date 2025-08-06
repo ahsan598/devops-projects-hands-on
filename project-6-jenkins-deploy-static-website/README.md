@@ -21,7 +21,7 @@ This project sets up a CI/CD pipeline using Jenkins to automate the deployment o
 - Image is deployed on EC2
 
 
-![Project Diagram](https://github.com/ahsan598/deploying-website-using-jenkins/blob/main/jenkins-deploy-static-site.png)
+![Project Diagram](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-6-jenkins-deploy-static-website/screenshots/jenkins-deploy-static-site.png)
 
 ---
 
@@ -84,7 +84,7 @@ docker run -d --name sonarqube -p 9000:9000 sonarqube
     ```
 - Create Pipeline Job
   - Create "**Pipeline**" job
-  - In Pipeline Script, use your `Jenkinsfile` from the repo
+  - In Pipeline Script, use your **Jenkinsfile** from the repo
 
 
 6. **Dockerizing the App**
@@ -94,7 +94,7 @@ FROM nginx:alpine
 COPY . /usr/share/nginx/html
 ```
 
-- Build Docker Image (in Jenkinsfile):
+- Build Docker Image (in Jenkins):
 ```sh
 docker build -t static-website .
 ```
