@@ -2,7 +2,7 @@
 
 ### 🎯 Purpose
 
-The goal of this Lift & Shift project is to migrate an existing on-premises web application to AWS Cloud with minimal changes to the application architecture. This approach provides:
+The goal of this Lift & Shift project is to migrate an existing on-premises web application to AWS cloud with minimal changes to the application architecture. This approach provides:
 - **Scalability** – Elastic compute resources
 - **Cost Optimization** – Pay-as-you-go pricing model
 - **Global Reach** – Multi-region infrastructure
@@ -14,7 +14,7 @@ The goal of this Lift & Shift project is to migrate an existing on-premises web 
 ### 📚 AWS Resources Used:
 
 1. **Virtual Private Cloud (VPC)**:
-- Custom VPC with CIDR block `10.0.0.0/16`
+- Custom **VPC** with CIDR block `10.0.0.0/16`
 - **Subnets**: Public and Private in multiple AZs
 - **Routing**: Route Tables, NAT Gateway, Internet Gateway
 - **Security**: NACLs & Security Groups
@@ -62,10 +62,11 @@ The goal of this Lift & Shift project is to migrate an existing on-premises web 
 
 ### 🗺️ Architecture Overview
 
-![Project Diagram](https://github.com/ahsan598/aws-lift-and-shift-webapp/blob/main/aws-lift-and-shift-webapp.png)
+![Project Diagram](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-5-aws-liftshift-webapp/aws-liftshift-webapp.png)
 
 > Deployed architecture includes VPC, ALB, EC2 (Tomcat), RDS, RabbitMQ, Memcached, Auto Scaling, and Route 53.
 
+---
 
 ### ⚙️ Implementation Steps
 
