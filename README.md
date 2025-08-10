@@ -2,7 +2,6 @@
 
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white&style=for-the-badge)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge)
-![SonarQube](https://img.shields.io/badge/SonarQube-%23222222?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD)
 ![Nexus](https://img.shields.io/badge/Nexus-green?logo=sonatype&logoColor=white&style=for-the-badge)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white&style=for-the-badge)
 ![Trivy](https://img.shields.io/badge/Trivy-007ACC?logo=trivy&logoColor=white&style=for-the-badge)
