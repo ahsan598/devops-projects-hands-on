@@ -1,7 +1,22 @@
 # 👨‍💻 Learn DevOps by Doing – My Practice Projects
 
-![Scope](https://img.shields.io/badge/Scope-Learning-steelblue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Practice_Projects-blueviolet?style=for-the-badge)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white&style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge)
+![SonarQube](https://img.shields.io/badge/SonarQube-%23222222?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD)
+![Nexus](https://img.shields.io/badge/Nexus-green?logo=sonatype&logoColor=white&style=for-the-badge)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white&style=for-the-badge)
+![Trivy](https://img.shields.io/badge/Trivy-007ACC?logo=trivy&logoColor=white&style=for-the-badge)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white&style=for-the-badge)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?logo=terraform&logoColor=white&style=for-the-badge)
+![Argo CD](https://img.shields.io/badge/Argo-EF7B4D?logo=argo&logoColor=fff&style=for-the-badge)
+![GitLab CI](https://img.shields.io/badge/GitLab_CI-FCA121?logo=gitlab&logoColor=white&style=for-the-badge)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white&style=for-the-badge)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white&style=for-the-badge)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?logo=ansible&logoColor=white&style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black&style=for-the-badge)
+![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white&style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
+
 
 Practicing real-world DevOps projects with hands-on implementations of **CI/CD**, **Containerization**, **Orchestration**, **Monitoring**, and **Infrastructure As Code (IaC)**.
 
