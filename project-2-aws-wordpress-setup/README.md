@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" width="40"/> AWS Project - Deploying a WordPress Website on AWS
+# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" width="40"/> AWS Project - Deploying a WordPress Website on AWS
 
 This project demonstrates how to deploy a **highly available**, **scalable**, and **secure** WordPress website on AWS using core cloud services and best practices.
 
@@ -45,50 +45,50 @@ The following components are created in this setup:
 
 Here’s an overview of how the WordPress hosting environment was configured:
 
-### 1. VPC & Subnet Setup
+**1. VPC & Subnet Setup**
 - Create a custom **VPC** with **2 public** and **2 private** subnets across **2 AZs**
 - Attach an **Internet Gateway (IGW)** to the VPC
 - Create and associate **route tables** for public/private subnets
 
-### 2. NAT Gateway (for Private Subnet Internet Access)
+**2. NAT Gateway (for Private Subnet Internet Access)**
 - Launch NAT Gateway in each public subnet
 - Allocate Elastic IPs
 - Add routes from private subnets to NAT Gateway
 
-### 3. Bastion Host
+**3. Bastion Host**
 - Launch **EC2 instance** in public subnet (Amazon Linux)
 - Assign Elastic IP and Security Group with SSH access
 - Use this host to SSH into EC2s in private subnet
 
-### 4. EC2 Instances for WordPress
+**4. EC2 Instances for WordPress**
 - Launch **EC2 instances** in private subnets (via Bastion Host)
 - Attach **IAM Role** allowing access to S3
 - Install **Apache, PHP, WordPress**, and configure settings
 
-### 5. S3 Bucket for Website Assets
+**5. S3 Bucket for Website Assets**
 - Upload WordPress themes, media, plugins etc. to an S3 bucket
 - Ensure correct bucket policy and access via EC2 IAM role
 
-### 6. RDS – MySQL Database
+**6. RDS – MySQL Database**
 - Create **Amazon RDS (MySQL)** in private subnet
 - Enable Multi-AZ for high availability
 - Connect from EC2 via internal endpoint
 
-### 7. Application Load Balancer (ALB)
+**7. Application Load Balancer (ALB)**
 - Create **ALB** in public subnets
 - Target group pointing to private EC2 instances
 - Configure listener on port 80 (or HTTPS if SSL added)
 
-### 8. Auto Scaling Group (ASG)
+**8. Auto Scaling Group (ASG)**
 - Define launch template with EC2 setup
 - Attach ASG to target group
 - Set scaling policies (CPU, health checks)
 
-### 9. Route 53 & Domain Setup
+**9. Route 53 & Domain Setup**
 - Register domain or create a hosted zone
 - Point domain to ALB DNS name via A record (Alias)
 
-### 10. Monitoring with CloudWatch
+**10. Monitoring with CloudWatch**
 - Set up CloudWatch alarms for EC2, ALB, RDS metrics
 - Collect logs from Apache or PHP using CloudWatch Agent
 
