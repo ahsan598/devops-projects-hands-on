@@ -1,41 +1,39 @@
-# 🌐 AWS Aurora MySQL Database Setup
+# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" width="40"/> AWS Project - Aurora MySQL Database Setup
 
 This lab sets up a **highly available Aurora MySQL cluster** within a **custom VPC architecture** in AWS using manual configuration (AWS Console). It's part of my DevOps learning journey, focusing on understanding cloud networking, security, and managed database services.
 
 ---
 
-### 🧱 Resources Provisioned
-
+### ☁️ Resources Provisioned
 The following components are created in this setup:
 
-- Amazon **VPC** with public and private subnets (across all selected AZs)
-- **Internet Gateway (IGW)** and **NAT Gateways** for internet access
-- **Network ACLs (NACLs)** for traffic control across AZs
-- Multiple **VPC Security Groups**
-- **Linux bastion host** in public subnet for SSH access
-- **Amazon Aurora MySQL DB cluster** in private subnet
-- **Aurora DB Replica** in a different AZ for high availability
+**1. Networking Layer**  
+- **VPC** spanning multiple Availability Zones  
+- **Public Subnets** for Bastion & NAT Gateways  
+- **Private Subnets** for Aurora DB (Multi-AZ)  
+- **NACLs & Security Groups** for traffic control  
+
+**2. Access & Security**  
+- **Bastion Host (Linux)** in Public Subnet for SSH access  
+- **Security Groups** for DB access & isolation  
+
+**3. Database Layer**  
+- **Aurora MySQL Cluster** in Private Subnets  
+- **Writer Instance** for primary DB operations  
+- **Reader Instance (Replica)** in different AZ for HA and read scaling  
+
+**4. Connectivity**  
+- **NAT Gateways** allow outbound access from private DB subnets  
+- Bastion → DB connection for admin access  
 
 
-### Project Architecture:
-
-> **Deployment uses the AWS Console** via a guided Quick Start.
+### 🔧 Project Architecture:
 
 ![Project Diagram](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-1-aws-aurora-db-setup/img/amazon-aurora-db-in-aws.svg)
 
-
-**This architecture provisions:**
-
-- A fully isolated VPC with public/private subnet pairs across AZs
-- Private subnets for Aurora DB instances (multi-AZ setup)
-- Public subnet hosting a **bastion host** for secure SSH into private resources
-- NAT gateways enabling internet access from private subnets
-- Aurora cluster with writer + reader DB instances
-
-
 ---
 
-### ⚙️ Setup Notes (Manual - AWS Console)
+### ⚙️ Implementation (Using AWS Console)
 
 Here’s a step-by-step overview of how this setup was created:
 
@@ -69,7 +67,7 @@ Here’s a step-by-step overview of how this setup was created:
    - Create an SSH tunnel to forward local port to Aurora DB endpoint
 
 
-### 🧪 Testing the Deployment
+### 🔍 Testing the Deployment
 
 To confirm that the Aurora MySQL DB is accepting connections:
 
@@ -87,12 +85,9 @@ To confirm that the Aurora MySQL DB is accepting connections:
 5. Once connected, you’ll see the MySQL Workbench dashboard.
 6. After testing, **terminate the SSH tunnel** using `Ctrl + C`
 
-✅ Deployment verified!
-
-
 ---
 
-### 📌 Notes
+### 📝 Notes
 
 - This setup was created manually to understand VPC-level networking and DB security zones.
 - In future, this same setup can be automated using Terraform or AWS CLI for repeatability.

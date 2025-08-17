@@ -1,4 +1,4 @@
-# 🌐 Deploying a WordPress Website on AWS
+# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" width="40"/> AWS Project - Deploying a WordPress Website on AWS
 
 This project demonstrates how to deploy a **highly available**, **scalable**, and **secure** WordPress website on AWS using core cloud services and best practices.
 
@@ -6,38 +6,42 @@ The architecture spans across multiple availability zones and includes component
 
 ---
 
-### 🧱 Resources Used
+### ☁️ Resources Provisioned
+The following components are created in this setup:
 
-- Amazon **VPC** with public and private subnets across **2 Availability Zones (AZs)**
-- **Internet Gateway** for outbound internet access
-- **NAT Gateway** for private subnets to access internet (when required)
-- **Security Groups** to manage EC2 and RDS traffic
-- **Bastion Host** in public subnet for secure SSH into private instances
-- **EC2 instances** for hosting WordPress (in private subnets)
-- **Auto Scaling Group (ASG)** for scalability and fault tolerance
-- **Application Load Balancer (ALB)** to distribute incoming web traffic
-- **Amazon RDS (MySQL)** as backend database
-- **Amazon S3** to store web files (plugins, media, themes)
-- **IAM Role** for EC2 to access S3
-- **Route 53** for domain registration and DNS routing
-- **CloudWatch** for monitoring logs, metrics, and alerts
+**1. Networking Layer**  
+- VPC with **Public** and **Private Subnets** across **2 AZs**  
+- **Internet Gateway** for external connectivity  
+- **NAT Gateway** for private subnet internet access  
+- **Security Groups** for EC2 and RDS  
+
+**2. Access & Security**  
+- **Bastion Host** in Public Subnet for SSH access  
+- **IAM Role** for EC2 → S3 access  
+
+**3. Compute & Database**  
+- **EC2 Instances** in Private Subnets (WordPress)  
+- **Amazon RDS (MySQL)** in Private Subnets (Multi-AZ)  
+
+**4. Scalability & Load Balancing**  
+- **Auto Scaling Group (ASG)** for EC2  
+- **Application Load Balancer (ALB)** in Public Subnets  
+
+**5. Storage & DNS**  
+- **Amazon S3** for WordPress assets  
+- **Route 53** for domain and DNS resolution  
+
+**6. Monitoring**  
+- **CloudWatch** for metrics, logs, and alarms
+
+
+### 🔧 Project Architecture:
+
+![Architecture](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-2-aws-wordpress-setup/img/aws-wordpress-website-diagram.svg)
 
 ---
 
-### 🧭 Architecture Diagram
-
-![Architecture](https://github.com/ahsan598/aws-project-2/blob/main/aws-wordpress-website-diagram.svg)
-
-
-### 🔍 Infrastructure Breakdown
-
-![AWS WordPress Explanation](infrastructure-breakdown.jpg)
-
-> This version of the diagram includes detailed annotations for each AWS component involved.
-
----
-
-## ⚙️ Setup Notes (Manual – AWS Console)
+### ⚙️ Implementation (Using AWS Console)
 
 Here’s an overview of how the WordPress hosting environment was configured:
 
@@ -89,7 +93,7 @@ Here’s an overview of how the WordPress hosting environment was configured:
 - Collect logs from Apache or PHP using CloudWatch Agent
 
 
-### 🧪 Testing the Deployment
+### 🔍 Testing the Deployment
 
 - Visit domain via browser → check WordPress home page
 - Test login, uploads (via S3), DB operations (via RDS)
@@ -98,20 +102,18 @@ Here’s an overview of how the WordPress hosting environment was configured:
 
 ---
 
-### 📌 Notes & Cost Control
-
-> ⚠️ **Important:**  
-- NAT Gateway is a **billable per-hour** service — keep it disabled or delete when not in use.
-- Delete **all resources** when not testing to avoid unexpected AWS charges.
-
-
-### 🚀 Learning Outcome
+### 📚 Learnings Outcome
 
 - Real-world VPC architecture for secure multi-tier web application
 - Use of ALB + ASG for load balancing and scalability
 - Integration of S3, RDS, Route 53, IAM Roles, and CloudWatch
 - Deep understanding of manual AWS provisioning (a step before automation)
 
+
+### ⚠️ Important Note
+- NAT Gateway is a **billable per-hour** service — keep it disabled or delete when not in use.
+- Delete **all resources** when not testing to avoid unexpected AWS charges.
+
 ---
 
-> _"Before you automate with Terraform or CloudFormation, understand what you're building manually."_ 💡
+> 💡 _"Before you automate with Terraform or CloudFormation, understand what you're building manually."_
