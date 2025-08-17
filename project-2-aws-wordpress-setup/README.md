@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" width="40"/> AWS Project - Deploying a WordPress Website on AWS
+# <img src="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="40"/> AWS Project - Deploying a WordPress Website on AWS
 
 This project demonstrates how to deploy a **highly available**, **scalable**, and **secure** WordPress website on AWS using core cloud services and best practices.
 
