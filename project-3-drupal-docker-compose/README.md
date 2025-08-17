@@ -26,10 +26,10 @@ Set up a Drupal-10 site with a MariaDB backend using Docker Compose. This projec
 
 ### Theme Overview:
 **Before applying theme to drupal**
-![before-theme-apply](https://github.com/ahsan598/devops-labs/blob/main/docker/drupal-docker-image/screenshots/before-theme-applied.jpg)
+![before-theme-apply](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-3-drupal-docker-compose/img/before-theme-applied.jpg)
 
 **After applying theme to drupal**
-![after-theme-apply](https://github.com/ahsan598/devops-labs/blob/main/docker/drupal-docker-image/screenshots/after-theme-applied.jpg) 
+![after-theme-apply](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-3-drupal-docker-compose/img/after-theme-applied.jpg) 
 
 ---
 

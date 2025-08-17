@@ -12,6 +12,13 @@ This project sets up a **multi-container Drupal CMS** using **Docker Compose**. 
 - A **MariaDB 10.9** container serving as the database backend
 - A **Custom Drupal Theme** (Bootstrap) added using a custom-built Docker image
 
+
+### 📦 Prerequisites
+
+- Docker installed: [Get Docker](https://docs.docker.com/get-docker/)
+- Docker Compose v2+
+
+
 ### 🔧 Project Components
 
 1. **`docker-compose.yml`**  
@@ -100,6 +107,14 @@ This `docker-compose.yml` file runs both services (Drupal + MariaDB) in an isola
 - `drupal-data` → Used to persist Drupal site configuration
 - `db-data` → Used to persist MariaDB database files
 
+
+### 📒 Learnings (So Far)
+
+- Docker networking works differently across compose vs single-container
+- Multi-stage builds drastically reduce final image size
+- Mounting local volumes makes live dev smoother, but caching gets tricky
+- FastAPI + PostgreSQL + Docker Compose is a killer combo for prototyping APIs
+- PHP apps with NGINX are simple but need good volume setup for live reloads
 
 
 ### 🌀 Docker Lifecycle Notes

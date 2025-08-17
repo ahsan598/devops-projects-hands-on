@@ -21,7 +21,7 @@ The following components are created in this setup:
 
 > **Deployment uses the AWS Console** via a guided Quick Start.
 
-![Project Diagram](https://github.com/ahsan598/aws-project-1/blob/main/amazon-aurora-db-in-aws.svg)
+![Project Diagram](https://github.com/ahsan598/devops-projects-hands-on/blob/main/project-1-aws-aurora-db-setup/img/amazon-aurora-db-in-aws.svg)
 
 
 **This architecture provisions:**
